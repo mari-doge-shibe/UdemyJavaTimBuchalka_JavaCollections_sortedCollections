@@ -49,7 +49,10 @@ public class Main {
         sellItem(timsBasket, "car", 1);
         System.out.println(timsBasket);
 
-        sellItem(timsBasket, "car", 1);
+        if(sellItem(timsBasket, "car", 1) != 1){
+            System.out.println("There are no more cars in stock");
+        }
+
         sellItem(timsBasket, "spanner", 5);
         System.out.println(timsBasket);
 
@@ -59,7 +62,10 @@ public class Main {
         System.out.println(timsBasket);
 
         System.out.println(stockList);
-
+/* Collections UnmodifiableMap returns an UnsupportedOperationException
+        temp = new StockItem("pen", 1.12);
+        stockList.Items().put(temp.getName(), temp);
+*/
 
     }
 
