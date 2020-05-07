@@ -96,6 +96,13 @@ public class Main {
         temp = new StockItem("pen", 1.12);
         stockList.Items().put(temp.getName(), temp);
 */
+        StockItem car = stockList.Items().get("car");
+        if (car != null) {
+            car.adjustStock(2000);
+        }
+        if (car != null) {
+            stockList.get("car").adjustStock(-1000);
+        }
 
 
         stockList.Items().get("car").adjustStock(2000);  // Both .Items().get and get will work
